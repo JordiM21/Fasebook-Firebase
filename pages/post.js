@@ -15,6 +15,12 @@ export default function Post() {
 	//Form state
 	const [post, setPost] = useState({ description: "" });
 	const [user, loading] = useAuthState(auth);
+	if (!user && loading) {
+		return <p>Loading...</p>;
+	}
+	if (!user) {
+		return null;
+	}
 	const route = useRouter();
 	const routeData = route.query;
 

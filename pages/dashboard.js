@@ -18,6 +18,12 @@ import Link from "next/link";
 export default function Dashboard() {
 	const route = useRouter();
 	const [user, loading] = useAuthState(auth);
+	if (!user && loading) {
+		return <p>Loading...</p>;
+	}
+	if (!user) {
+		return null;
+	}
 	const [posts, setPosts] = useState([]);
 	//See if user is logged
 	const getData = async () => {
