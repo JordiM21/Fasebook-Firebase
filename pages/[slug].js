@@ -13,7 +13,6 @@ import {
 	Timestamp,
 	updateDoc,
 } from "firebase/firestore";
-import defaultImage from "../public/default-img.png";
 
 export default function Details() {
 	const router = useRouter();
@@ -24,7 +23,13 @@ export default function Details() {
 	//Submit a message
 	const submitMessage = async () => {
 		//Check if the user is logged
-		if (!auth.currentUser) return router.push("/auth/login");
+		if (!auth.currentUser) {
+			toast.error("You have to log in first! 🧐", {
+				position: toast.POSITION.TOP_CENTER,
+				autoClose: 1500,
+			});
+			return router.push("/auth/Login");
+		}
 
 		if (!message) {
 			toast.error("Don't leave an empty message 😅", {
@@ -62,7 +67,6 @@ export default function Details() {
 		getComments();
 	}, [router.isReady]);
 
-	console.log(allMessage);
 	return (
 		<div>
 			<Message {...routeData}></Message>

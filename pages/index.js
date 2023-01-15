@@ -47,7 +47,7 @@ export default function Home() {
 								},
 							}}
 						>
-							<button className="text-sm text-gray-700">
+							<button className="text-sm text-gray-700 hover:text-gray-500">
 								{post.comments
 									?.length >
 								0

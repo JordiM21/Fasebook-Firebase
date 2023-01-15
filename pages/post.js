@@ -73,7 +73,6 @@ export default function Post() {
 				description: routeData.description,
 				id: routeData.id,
 			});
-			console.log(routeData);
 		}
 	};
 

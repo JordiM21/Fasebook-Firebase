@@ -55,6 +55,23 @@ export default function Dashboard() {
 	};
 	return (
 		<div className="my-8 text-g font-medium">
+			<header className="flex justify-center gap-2 md:gap-8 lg:gap-12 my-6">
+				<div className="rounded-full relative">
+					<img
+						className="rounded-full"
+						src={user.photoURL}
+					/>
+					<div className="absolute bg-green-600 p-3 bottom-0 right-0 rounded-full" />
+				</div>
+				<div className="text-center">
+					<h2 className="text-3xl">
+						{user?.displayName}
+					</h2>
+					<p className="text-sm text-gray-800">
+						{user?.email}
+					</p>
+				</div>
+			</header>
 			<div className="flex justify-between items-center">
 				<h1>Your Posts</h1>
 				<button
