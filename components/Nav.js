@@ -4,7 +4,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Nav() {
 	const [user, loading] = useAuthState(auth);
-
+	if (!user && loading) {
+		return <p>Loading...</p>;
+	}
+	if (!user) {
+		return null;
+	}
 	let name = user.displayName;
 	let [firstName, secondName] = name.split(" ");
 

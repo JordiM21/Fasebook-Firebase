@@ -43,7 +43,7 @@ export default function Details() {
 			comments: arrayUnion({
 				message,
 				avatar: auth.currentUser.photoURL,
-				userName: auth.currentUser?.displayName,
+				userName: auth.currentUser.displayName,
 				time: Timestamp.now(),
 			}),
 		});

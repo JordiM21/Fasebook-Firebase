@@ -53,7 +53,7 @@ export default function Post() {
 				timestamp: serverTimestamp(),
 				user: user.uid,
 				avatar: user.photoURL,
-				username: user?.displayName,
+				username: user.displayName,
 			});
 			setPost({ description: "" });
 			toast.success("Post has been made 🚀", {
