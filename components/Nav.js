@@ -5,7 +5,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 export default function Nav() {
 	const [user, loading] = useAuthState(auth);
 
-	let [firstName, secondName] = user.displayName.split(" ");
+	let name = user.displayName;
+	let [firstName, secondName] = name.split(" ");
 
 	return (
 		<nav className="bg-white md:rounded-lg flex justify-around gap-10 sm:gap-20 items-center py-2">
