@@ -8,12 +8,6 @@ import { useEffect } from "react";
 export default function Login() {
 	const route = useRouter();
 	const [user, loading] = useAuthState(auth);
-	if (!user && loading) {
-		return <p>Loading...</p>;
-	}
-	if (!user) {
-		return null;
-	}
 	//Sign in with google
 	const googleProvider = new GoogleAuthProvider();
 	const GoogleLogin = async () => {

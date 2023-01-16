@@ -22,7 +22,8 @@ export default function Dashboard() {
 		return <p>Loading...</p>;
 	}
 	if (!user) {
-		return null;
+		alert("wait the data is loading");
+		return;
 	}
 	const [posts, setPosts] = useState([]);
 	//See if user is logged

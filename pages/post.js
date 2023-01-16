@@ -19,8 +19,10 @@ export default function Post() {
 		return <p>Loading...</p>;
 	}
 	if (!user) {
-		return null;
+		alert("wait the data is loading");
+		return;
 	}
+
 	const route = useRouter();
 	const routeData = route.query;
 

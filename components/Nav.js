@@ -2,17 +2,8 @@ import Link from "next/link";
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-export default function Nav() {
-	const [user, loading] = useAuthState(auth);
-	if (!user && loading) {
-		return <p>Loading...</p>;
-	}
-	if (!user) {
-		return null;
-	}
-	let name = user.displayName;
-	let [firstName, secondName] = name.split(" ");
-
+export default function Nav(props) {
+	const { user } = props;
 	return (
 		<nav className="bg-white md:rounded-lg flex justify-around gap-10 sm:gap-20 items-center py-2">
 			<Link href="/">
@@ -52,12 +43,8 @@ export default function Nav() {
 							<div className="group-hover:underline decoration-cyan-700 text-center">
 								<p className="text-lg font-medium">
 									{
-										firstName
-									}{" "}
-									{
-										secondName[0]
+										user.displayName
 									}
-									.
 								</p>
 								<p className="text-xs text-gray-800">
 									See my
