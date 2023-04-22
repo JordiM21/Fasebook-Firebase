@@ -39,8 +39,8 @@ See the live version in this link
 - View Home Page **(Desktop and mobile)**
 
 <div style={{display="flex"}}>
-<img src="https://i.imgur.com/eizIKNW.png" width="250" />
-<img src="https://i.imgur.com/8W3Hn9E.png" width="250" />
-<img src="https://i.imgur.com/2ga0QTj.png" width="250" />
-<img src="https://i.imgur.com/HmWcAsd.png" width="250" />
+<img src="https://i.imgur.com/eizIKNW.png" width="200" />
+<img src="https://i.imgur.com/8W3Hn9E.png" width="200" />
+<img src="https://i.imgur.com/2ga0QTj.png" width="200" />
+<img src="https://i.imgur.com/HmWcAsd.png" width="200" />
 </div>
